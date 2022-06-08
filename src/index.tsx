@@ -10,8 +10,14 @@ import {
 } from "decky-frontend-lib";
 import { VFC } from "react";
 import { FaShip } from "react-icons/fa";
-import { ButtonPlayground, DropdownPlayground } from "./playgrounds";
-import { TextFieldPlayground } from "./playgrounds/TextFieldPlayground";
+import {
+  ButtonPlayground,
+  DropdownPlayground,
+  ProgressBarPlayground,
+  SliderPlayground,
+  TextFieldPlayground,
+  TogglePlayground,
+} from "./playgrounds";
 
 const Content: VFC<{ serverAPI: ServerAPI }> = ({}) => {
   return (
@@ -62,6 +68,21 @@ const DeckyPluginRouterTest: VFC = () => {
           title: "Dropdown",
           content: <DropdownPlayground />,
           route: "/decky-playground/dropdown",
+        },
+        {
+          title: "Slider",
+          content: <SliderPlayground />,
+          route: "/decky-playground/slider",
+        },
+        {
+          title: "Toggle",
+          content: <TogglePlayground />,
+          route: "/decky-playground/toggle",
+        },
+        {
+          title: "Progress Bar",
+          content: <ProgressBarPlayground />,
+          route: "/decky-playground/progressbar",
         },
       ]}
     />
