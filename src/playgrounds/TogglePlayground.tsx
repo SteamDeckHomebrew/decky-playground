@@ -1,4 +1,4 @@
-import { PanelSectionRow, Toggle } from "decky-frontend-lib";
+import { PanelSectionRow, ToggleField } from "decky-frontend-lib";
 import { useState, VFC } from "react";
 import { FaShapes } from "react-icons/fa";
 
@@ -8,7 +8,7 @@ export const TogglePlayground: VFC = () => {
   return (
     <>
       <PanelSectionRow>
-        <Toggle
+        <ToggleField
           label="A Toggle"
           description={`Description: ${checked}`}
           checked={checked}
@@ -16,10 +16,10 @@ export const TogglePlayground: VFC = () => {
         />
       </PanelSectionRow>
       <PanelSectionRow>
-        <Toggle label="A disabled Toggle" disabled checked={checked} />
+        <ToggleField label="A disabled Toggle" disabled checked={checked} />
       </PanelSectionRow>
       <PanelSectionRow>
-        <Toggle
+        <ToggleField
           label="A Toggle with an icon"
           checked={checked}
           onChange={(e) => setChecked(e)}
